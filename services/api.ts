@@ -3,8 +3,8 @@ import { User } from '@/types/user';
 import { Expense } from '@/types/expense';
 
 // Base API URL
-// const BASE_URL = 'https://67ac71475853dfff53dab92a.mockapi.io/api/v1';
-const BASE_URL = 'https://683571bbcd78db2058c184d8.mockapi.io/api/v1';
+const BASE_URL = 'https://67ac71475853dfff53dab929.mockapi.io/api/v1';
+// const BASE_URL = 'https://683571bbcd78db2058c184d8.mockapi.io/api/v1';
 
 // Create axios instance
 const api = axios.create({
