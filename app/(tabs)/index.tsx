@@ -49,7 +49,7 @@ export default function DashboardScreen() {
         <ActivityIndicator size="large" color={Colors.primary[600]} />
       </View>
     );
-  }
+  } 
 
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
@@ -60,7 +60,7 @@ export default function DashboardScreen() {
         }
       >
         <View style={styles.headerContainer}>
-          <Text style={styles.greeting}>Hello, {user?.name || 'User'}</Text>
+          <Text style={styles.greeting}>Hello, {user?.username || 'User'}</Text>
           <Text style={styles.date}>{new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</Text>
         </View>
 
