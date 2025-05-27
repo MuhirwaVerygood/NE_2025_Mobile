@@ -1,0 +1,35 @@
+@startuml FinanceTrackerSimplified
+
+left to right direction  
+skinparam monochrome true  
+
+actor User as user  
+
+rectangle "Mobile App" {  
+    component "Login" as login  
+    component "Dashboard" as dashboard  
+    component "Expenses" as expenses  
+    component "Budgets" as budgets  
+}  
+
+rectangle "API Server" {  
+    component "Users API" as users  
+    component "Expenses API" as expensesAPI  
+}  
+
+database "Mock API" as mockAPI  
+
+user --> login : "1. Email & Password"  
+login --> users : "2. Validate User"  
+users --> mockAPI : "GET /users"  
+
+login --> dashboard : "3. Success"  
+dashboard --> expensesAPI : "4. Fetch Expenses"  
+expensesAPI --> mockAPI : "GET /expenses"  
+
+dashboard --> budgets : "5. View/Set Budgets"  
+budgets --> users : "6. Update Budget"  
+
+expenses --> expensesAPI : "7. CRUD Operations"  
+
+@enduml     
